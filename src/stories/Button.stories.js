@@ -1,10 +1,13 @@
 import React from 'react';
 import Button from '../components/Button';
+import { Title } from '@storybook/blocks';
 // Importing the component for which we will create the story
 
 export default {
+    // Title: 'Hello',
     title : "Button",
     component : Button,
+    argTypes: { onClick : { action : 'someLabel'}}
 }
 
 // Defining the stories by exporting const functions
