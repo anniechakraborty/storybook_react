@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 function Button({label, backgroundColor='red', size='md', onClick}){
     let scale = 1;
@@ -17,10 +18,11 @@ function Button({label, backgroundColor='red', size='md', onClick}){
     )
 }
 
-// Button.propTypes = {
-//     label: PropTypes.string,
-//     backgroundColor: PropTypes.string,
-//     size: PropTypes.string,
-// }
+Button.propTypes = {
+    label: PropTypes.string,
+    backgroundColor: PropTypes.string,
+    size: PropTypes.oneOf(["sm", "md", "lg"]),
+    onClick: PropTypes.func
+}
 
 export default Button;
